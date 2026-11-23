@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+   <link rel="icon" href="{{ asset('favlogo.ico') }}" type="image/x-icon">
     <title>Eco35 - CBTa No. 35 "Leona Vicario"</title>
     <!-- Estilos de Leaflet por si hay internet -->
     <link rel="stylesheet" href="https://unpkg.com" />
@@ -48,9 +49,11 @@
     </style>
 </head>
 <body>
-
-<div class="navbar">
-    <h1>🌱 Eco35 | Sistema de Monitoreo Ambiental - CBTa No. 35</h1>
+<div class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+       <img src="{{ asset('img/logo-cbta35.svg') }}" alt="Logo CBTa 35" style="height: 45px; width: auto;">
+        <h1>Eco35 | Sistema de Monitoreo Ambiental - CBTa No. 35</h1>
+    </div>
     <span>San Juan Tlalpizáhuac, Ixtapaluca</span>
 </div>
 
@@ -147,7 +150,7 @@
                         </select>
 
                         <label>Cantidad de Plántulas</label>
-                        <input type="number" name="cantidad" min="1" placeholder="Ej. 50" required>
+                        <input type="number" name="cantidad" min="1" max="500" placeholder="Ej. 50" required>
 
                         <div class="checkbox-box">
                             <input type="checkbox" name="agua_roja" id="aguaRoja">
